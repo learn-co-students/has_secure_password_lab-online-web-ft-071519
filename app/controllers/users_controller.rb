@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def create
-        binding.pry
+        
         redirect_to new_user_url if params[:user][:password_confirmation] != params[:user][:password]
  
  @user = User.create(user_params)
